@@ -11,5 +11,5 @@ import ngd.springframework.domain.UnitOfMeasure;
  * @author Claudinei Dias on 2018-02-02
  */
 public interface UnitOfMeasureRepository extends CrudRepository<UnitOfMeasure, Long>{
-	Optional<UnitOfMeasure> findByUom(String uom);
+	Optional<UnitOfMeasure> findByDescription(String description);
 }
