@@ -9,6 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
+ * Simple test class using just JUnit
+ * 
  * @author Claudinei Dias on 2018-02-09
  */
 public class CategoryTest {

@@ -1,5 +1,8 @@
 package ngd.springframework.service;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.stereotype.Service;
 
 import ngd.springframework.domain.Recipe;
@@ -19,8 +22,10 @@ public class RecipeServiceImpl implements RecipeService{
 	}
 
 	@Override
-	public Iterable<Recipe> getRecipes() {
-		return recipeRepository.findAll();
+	public Set<Recipe> getRecipes() {
+		Set<Recipe> recipes = new HashSet<>();
+		recipeRepository.findAll().forEach(recipes::add);
+		return recipes;
 	}
 
 }
