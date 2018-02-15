@@ -63,6 +63,7 @@ public class IndexControllerTest {
 
 		when(recipeService.getRecipes()).thenReturn(recipes);
 
+		@SuppressWarnings("unchecked")
 		ArgumentCaptor<Set<Recipe>> argumentCaptor = ArgumentCaptor.forClass(Set.class);
 		//when
 		String viewName = controller.getIndexPage(model);
